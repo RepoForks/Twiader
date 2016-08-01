@@ -1,15 +1,15 @@
 # Twiader
 Twiader is an app that retrieves unread tweets from your Twitter timeline and read them aloud.
 
-![Twiader Intro](/art/intro.png)
-![Twiader Not Reading](/art/not_reading.png)
-![Twiader Reading](/art/reading.png)
-![Twiader Reading](/art/all_read.png)
-
 ##Quick links  
 - [Download .apk](https://github.com/jydimir/Twiader/releases)
 - [Report an issue or request a feature](https://github.com/jydimir/Twiader/issues)
 - [Make pull request](https://github.com/jydimir/Twiader/pulls)
+
+![Twiader Intro](/art/intro.png)
+![Twiader Not Reading](/art/not_reading.png)
+![Twiader Reading](/art/reading.png)
+![Twiader Reading](/art/all_read.png)
 
 ##Contribution
 Feel free to create an issue or make pull request. 
