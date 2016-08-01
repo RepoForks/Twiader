@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Twiader</string>
+    <string name="reader_loading_text">Loading</string>
+    <string name="reader_empty_text">You have no tweets to read. Have a nice day!</string>
+    <string name="reader_error_text">Something went wrong while loading your tweets :(</string>
+    <string name="reader_unread_text">unread</string>
+    <string name="login_error">An error occurred :( Check Internet connection</string>
+
+    <string name="utterance_tweeted">tweeted</string>
+    <string name="utterance_mention">mention</string>
+    <string name="utterance_link">link</string>
+    <string name="utterance_hashtag">hashtag</string>
+
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_mark_as_read">Mark As Read</string>
+    <string name="menu_log_out">Log Out</string>
+
+    <string name="twitter_name_template">\@%1$s</string>
+
+    <string name="twitter_no_connection">No connection</string>
+    <string name="intro_title">Note</string>
+    <string name="intro_description">Only ENGLISH language supported. Tweets in other languages won\'t be read or will be read incorrectly</string>
+</resources>

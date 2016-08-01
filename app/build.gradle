@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'realm-android'
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.github.jydimir.twiader"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "0.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    jUnitVersion = '4.12'
+    supportVersion = '23.3.0'
+    butterKnifeVersion = '8.0.1'
+    daggerVersion = '2.1'
+    timberVersion = '3.1.0'
+    rxJavaVersion = '1.1.5'
+    rxAndroidVersion = '1.2.0'
+    gsonVersion = '2.6.2'
+    twitterSdkVersion = '1.13.2'
+    crashlyticsVersion = '2.5.6'
+    retrofitVersion = '2.0.2'
+    okHttpVersion = '3.3.1'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile "junit:junit:${jUnitVersion}"
+    compile "com.android.support:appcompat-v7:${supportVersion}"
+    compile "com.android.support:design:${supportVersion}"
+    compile "com.android.support:percent:${supportVersion}"
+    compile "com.jakewharton:butterknife:${butterKnifeVersion}"
+    apt "com.jakewharton:butterknife-compiler:${butterKnifeVersion}"
+    compile "com.google.dagger:dagger:${daggerVersion}"
+    apt "com.google.dagger:dagger-compiler:${daggerVersion}"
+    compile "com.jakewharton.timber:timber:${timberVersion}"
+    compile "io.reactivex:rxandroid:${rxAndroidVersion}"
+    compile "io.reactivex:rxjava:${rxJavaVersion}"
+    compile "com.google.code.gson:gson:${gsonVersion}"
+    compile "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    compile "com.squareup.okhttp3:okhttp:${okHttpVersion}"
+    compile "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+    compile 'se.akerfeldt:okhttp-signpost:1.1.0'
+    compile 'oauth.signpost:signpost-core:1.2.1.2'
+    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.2'
+    compile("com.twitter.sdk.android:twitter:${twitterSdkVersion}@aar") {
+        transitive = true;
+    }
+    compile("com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}@aar") {
+        transitive = true;
+    }
+    compile 'com.github.paolorotolo:appintro:4.0.0'
+}

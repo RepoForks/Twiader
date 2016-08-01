@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.jydimir.twiader.reader.ReaderView xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:id="@+id/reader_view"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent"
+                                              android:orientation="vertical"
+                                              android:paddingBottom="@dimen/activity_vertical_margin"
+                                              android:paddingLeft="@dimen/activity_horizontal_margin"
+                                              android:paddingRight="@dimen/activity_horizontal_margin"
+                                              android:paddingTop="@dimen/activity_vertical_margin">
+
+    <com.github.jydimir.twiader.util.RobotoTextView
+        android:id="@+id/tv_logged_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="@dimen/default_roboto_text_size"/>
+
+    <com.github.jydimir.twiader.util.BetterViewAnimator
+        android:id="@+id/reader_animator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <LinearLayout
+            android:id="@+id/reader_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/reader_loading_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_file_download_120dp"
+                android:tint="@color/colorSecondaryText"/>
+
+            <com.github.jydimir.twiader.util.RobotoTextView
+                android:id="@+id/reader_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_large"
+                android:text="@string/reader_loading_text"
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_roboto_text_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reader_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/reader_empty_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_sun_120dp"
+                android:tint="@color/colorSecondaryText"/>
+
+            <com.github.jydimir.twiader.util.RobotoTextView
+                android:id="@+id/reader_empty_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_large"
+                android:text="@string/reader_empty_text"
+                android:gravity="center"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_roboto_text_size"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reader_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/reader_error_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_error_outline_120dp"
+                android:tint="@color/colorSecondaryText"/>
+
+            <com.github.jydimir.twiader.util.RobotoTextView
+                android:id="@+id/reader_error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_large"
+                android:gravity="center"
+                android:text="@string/reader_error_text"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="@dimen/default_roboto_text_size"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reader_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_unread_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.github.jydimir.twiader.util.RobotoTextView
+                    android:id="@+id/reader_unread_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/reader_tweets_quantity_font_size"/>
+
+                <com.github.jydimir.twiader.util.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reader_unread_text"
+                    android:textSize="@dimen/default_roboto_text_size"/>
+            </LinearLayout>
+
+            <com.github.jydimir.twiader.reader.PlaybackPanelView
+                android:id="@+id/playback_panel_view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+        </LinearLayout>
+
+    </com.github.jydimir.twiader.util.BetterViewAnimator>
+
+</com.github.jydimir.twiader.reader.ReaderView>
